@@ -1,6 +1,6 @@
-@import url("/resources/fonts/corporate-icons/style.css");
-@import url("/resources/fonts/corporate-icons/style.css");
-@import url('/vendors/frameworks/dojo/1.7.4/dijit/themes/dijit.css');
+@import url("//static.scania.com/resources/fonts/corporate-icons/style.css");
+@import url("//static.scania.com/resources/fonts/corporate-icons/style.css");
+@import url('//static.scania.com/vendors/frameworks/dojo/1.7.4/dijit/themes/dijit.css');
 .compiled_at {
   content: "Mon Mar 02 2015 15:51:48 GMT+0100 (Västeuropa, normaltid)";
 }
