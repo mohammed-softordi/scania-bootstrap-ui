@@ -4,11 +4,11 @@ Scania Bootstrap UI is a custimized version of the popular CSS Framework develop
 Basically, you can use it when developing web sites and you will then be helped by our pre-styled elements.
 
 
- ## Installation
+## Installation
 
       bower install scania-ui
 
- # Usage
+# Usage
 
 Add the following script to your index.html file and you are good to go :<br/>
 
