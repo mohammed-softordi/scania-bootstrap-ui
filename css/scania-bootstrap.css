@@ -1,7 +1,10 @@
 @import url("//static.scania.com/resources/fonts/external_fonts.css");
-@import url("//static.scania.com/resources/fonts/font-awesome/font-awesome.css");
 /*!
- *TODO replace this with //static.scania.com/vendors/frameworks/bootstrap/3.3.4/css/bootstrap.css
+ * TODO replace with static.scania.com/resources/fonts/font-awesome/4.4.0/font-awesome.css
+ */
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+/*!
+ * TODO replace this with //static.scania.com/vendors/frameworks/bootstrap/3.3.4/css/bootstrap.css
  */
 @import url("//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css");
 @import url("/bower_components/bootstrap/scania-bootstrap-overrides.css");
