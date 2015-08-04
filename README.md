@@ -10,6 +10,8 @@ Basically, you can use it when developing web sites and you will then be helped 
 
 # Usage
 
+Copy scania-bootstrap-overrides.css file to bower_components/bootstrap directory under your app root.
+
 Add the following script to your index.html file and you are good to go :<br/>
 
     <link rel="stylesheet" type="text/css" href="bower_components/scania-ui/css/scania-bootstrap.css" >
