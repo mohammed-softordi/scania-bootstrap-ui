@@ -21,4 +21,4 @@ Add the .bootstrap selector to the body tag in your index.html and follow the Sc
 
     <body class="bootstrap" ng-controller="CoreCtrl as core" ng-attr-data-env="{{core.envname}}">
 
-The complete UI guidelines can be found <a href="https://static.scania.com/cds/cds-site/index.html">here</a>wer
+The complete UI guidelines can be found <a href="https://static.scania.com/cds/cds-site/index.html">here</a>
