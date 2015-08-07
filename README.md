@@ -6,7 +6,7 @@ Basically, you can use it when developing web sites and you will then be helped 
 
 ## Installation
 
-      bower install scania-ui
+      bower install scania-bootstrap-ui
 
 # Usage
 
