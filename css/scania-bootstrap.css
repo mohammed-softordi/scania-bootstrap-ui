@@ -7,7 +7,7 @@
  * TODO replace this with //static.scania.com/vendors/frameworks/bootstrap/3.3.4/css/bootstrap.css
  */
 @import url("//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css");
-@import url("bower_components/bootstrap/scania-bootstrap-overrides.css");
+@import url("/bower_components/bootstrap/scania-bootstrap-overrides.css");
 /*!
  * Scania Bootstrap
  * Maintained and Developed by CDS (Common Design Service)
