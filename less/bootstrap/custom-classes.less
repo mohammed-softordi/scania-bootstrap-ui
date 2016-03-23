@@ -36,8 +36,8 @@
 .bg-half-danger   { background-image: linear-gradient(to bottom right, transparent 0%, transparent 50%, @brand-danger 50%, @brand-danger 100%) !important; }
 .bg-half-info     { background-image: linear-gradient(to bottom right, transparent 0%, transparent 50%, @brand-info 50%, @brand-info 100%) !important; }
 
-.bg-cross { background-image: linear-gradient(to bottom right, transparent 45%, #ddd 48%, #ddd 51%, transparent 55%), 
-                              linear-gradient(to bottom left, transparent 45%, #ddd 48%, #ddd 51%, transparent 55%) !important; }
+.bg-cross { background-image: linear-gradient(to bottom right, transparent 45%, #ddd 48%, #ddd 51%, transparent 55%),
+linear-gradient(to bottom left, transparent 45%, #ddd 48%, #ddd 51%, transparent 55%) !important; }
 
 .bg-disabled { color: #ddd !important; }
 .bg-red { background-color: @framework-red !important; }
@@ -66,19 +66,19 @@
 
 
 .badge-highlighted {
-  &.bg-disabled { color: darken(#ddd, 5%) !important; }
-  &.bg-red { background-color: darken(@framework-red, 5%) !important; }
-  &.bg-lightblue { background-color: darken(@framework-lightblue, 5%) !important; }
-  &.bg-darkblue { background-color: darken(@framework-darkblue, 5%) !important; }
-  &.bg-sepia { background-color: darken(@framework-sepia, 5%) !important; }
-  &.bg-grayish { background-color: darken(@framework-grayish, 5%) !important; }
-  &.bg-skyblue { background-color: darken(@framework-skyblue, 5%) !important; }
-  &.bg-light { background-color: darken(@framework-light, 5%) !important; }
-  &.bg-babyblue { background-color: darken(@framework-babyblue, 5%) !important; }
-  &.bg-yellow { background-color: darken(@framework-yellow, 5%) !important; }
-  &.bg-black { background-color: darken(@framework-black, 5%) !important; }
-  &.bg-white { background-color: darken(@framework-white, 5%) !important; }
-  &.bg-gold { background-color: darken(@framework-gold, 5%) !important; }
+    &.bg-disabled { color: darken(#ddd, 5%) !important; }
+    &.bg-red { background-color: darken(@framework-red, 5%) !important; }
+    &.bg-lightblue { background-color: darken(@framework-lightblue, 5%) !important; }
+    &.bg-darkblue { background-color: darken(@framework-darkblue, 5%) !important; }
+    &.bg-sepia { background-color: darken(@framework-sepia, 5%) !important; }
+    &.bg-grayish { background-color: darken(@framework-grayish, 5%) !important; }
+    &.bg-skyblue { background-color: darken(@framework-skyblue, 5%) !important; }
+    &.bg-light { background-color: darken(@framework-light, 5%) !important; }
+    &.bg-babyblue { background-color: darken(@framework-babyblue, 5%) !important; }
+    &.bg-yellow { background-color: darken(@framework-yellow, 5%) !important; }
+    &.bg-black { background-color: darken(@framework-black, 5%) !important; }
+    &.bg-white { background-color: darken(@framework-white, 5%) !important; }
+    &.bg-gold { background-color: darken(@framework-gold, 5%) !important; }
 }
 
 /*** CURSOR ***/
@@ -110,168 +110,106 @@
 
 /*** NO WRAP ***/
 .no-wrap {
-  white-space: nowrap !important;
+    white-space: nowrap !important;
 }
 
 /*** TABLES ***/
-// Clickable Table
-.table-clickable > tbody > tr:hover > td, 
-.table-clickable > tbody > tr:hover > th,
-.well .table-clickable > tbody > tr:hover > td, 
-.well .table-clickable > tbody > tr:hover > th {
-  background-color: @framework-skyblue;
-  cursor: pointer;
-}
-.table-selectable {
-
-  > tbody > tr {
-
-    &:hover > td,
-    &.active > td,
-    &.expanded > td {
-      background-color: @framework-skyblue;
-      cursor: default;
-    }
-    &.expandable {
-
-      > td:first-child:before {
-        &:extend([class^="icon-"]);
-        &:extend(.icon-caret-right:before);
-
-        display: inline-block;
-        width: 10px;
-        margin-right: 2px;
-      }
-      + tr > td {
-        background-color: @framework-skyblue;
-        padding: 0;
-
-        > div {
-          background-color: #fff;
-          overflow: hidden;
-          margin: 0 5px 5px;
-
-          > .content {
-            padding: 10px;
-          }
-        }
-      }
-
-      &.expanded {
-
-        > td {
-
-          &:first-child:before {
-            &:extend(.icon-caret-down:before);
-          }
-        }
-        // Add some space between two expanded rows
-        + .expand-child + .expand-child + .expanded {
-
-          > td {
-            border-top: 3px solid #fff;
-          }
-        }
-      }
-    }
-  }
-}
 .filtered {
-  display: none;
+    display: none;
 }
 .table {
 
-  tbody {
-    tr.row-selected > td,
-    tr.row-selectable:hover > td {
-      background-color: @framework-skyblue;
-      cursor: default;
-    }
-    tr.row-selectable > td {
-
-      &:first-child:before {
-        &:extend([class^="icon-"]);
-        &:extend(.icon-caret-right:before);
-
-        margin-right: 10px;
-      }
-    }
-    tr.row-selected {
-
-      &.row-selectable > td,
-      > td {
-
-        &:first-child:before {
-          &:extend(.icon-caret-down:before);
-        }
-      }
-      + tr > td {
-        background-color: #D1E8F2;
-        padding-top: 0;
-        border-top: 0;
-
-        > * {
-          background-color: #fff;
-        }
-        > div {
-          padding: 15px;
-        }
-      }
-    }
-  }
-
-  &.table-sm,
-  &.table-md,
-  &.table-lg {
-    // "max-width" needs to be set width js based on how big the table is
-    // or as a static value per table :/
-    max-width: 500px;
-
-    tr {
-      display: block;
-
-      th,
-      td {
-        width: 8%;
-      }
-    }
     tbody {
-      display: block;
-      overflow-x: hidden;
-      max-width: inherit;
-
-      tr {
-        // The following rules is used for keeping the columns correctely aligned.
-        // Independent if the table have a scrollbar or not
-        max-width: inherit;
-        margin-right: -16px;
-
-        td:last-child {
-          padding-right: 24px; // 16 + 8 = scrollbar size + default padding
+        tr.row-selected > td,
+        tr.row-selectable:hover > td {
+            background-color: darken(@framework-skyblue, 10%);
+            cursor: default;
         }
-      }
+        tr.row-selectable > td {
+
+            &:first-child:before {
+                &:extend([class^="icon-"]);
+                &:extend(.icon-caret-right:before);
+
+                margin-right: 10px;
+            }
+        }
+        tr.row-selected {
+
+            &.row-selectable > td,
+            > td {
+
+                &:first-child:before {
+                    &:extend(.icon-caret-down:before);
+                }
+            }
+            + tr > td {
+                background-color: darken(@framework-skyblue, 10%);
+                padding-top: 0;
+                border-top: 0;
+
+                > * {
+                    background-color: #fff;
+                }
+                > div {
+                    padding: 15px;
+                }
+            }
+        }
     }
-  }
-  &.table-sm tbody {
-    max-height: 120px;
-  }
-  &.table-md tbody {
-    max-height: 250px;
-  }
-  &.table-lg tbody {
-    max-height: 400px;
-  }
+
+    &.table-sm,
+    &.table-md,
+    &.table-lg {
+        // "max-width" needs to be set width js based on how big the table is
+        // or as a static value per table :/
+        max-width: 500px;
+
+        tr {
+            display: block;
+
+            th,
+            td {
+                width: 8%;
+            }
+        }
+        tbody {
+            display: block;
+            overflow-x: hidden;
+            max-width: inherit;
+
+            tr {
+                // The following rules is used for keeping the columns correctely aligned.
+                // Independent if the table have a scrollbar or not
+                max-width: inherit;
+                margin-right: -16px;
+
+                td:last-child {
+                    padding-right: 24px; // 16 + 8 = scrollbar size + default padding
+                }
+            }
+        }
+    }
+    &.table-sm tbody {
+        max-height: 120px;
+    }
+    &.table-md tbody {
+        max-height: 250px;
+    }
+    &.table-lg tbody {
+        max-height: 400px;
+    }
 }
 // This is a separate rule to make this rule over rule the previous one.
 // This could be solved by using the specific unicode instead
 table.table {
 
-  tr.row-selected > td {
+    tr.row-selected > td {
 
-    &:first-child:before {
-      &:extend(.icon-caret-down:before);
+        &:first-child:before {
+            &:extend(.icon-caret-down:before);
+        }
     }
-  }
 }
 
 /*** WIDTH ***/
@@ -383,39 +321,39 @@ table.table {
 
 /*** DISPLAY ***/
 .display-inline {
-  display: inline !important;
+    display: inline !important;
 }
 
 .display-block {
-  display: block !important;
+    display: block !important;
 }
 
 /*** MODAL SIZES ***/
 // @media screen and (min-width: 768px){
-  .modal-sm {
+.modal-sm {
     width: 80%;
     max-width: 400px;
-  }
-  .modal-md {
+}
+.modal-md {
     width: 80%;
     max-width: 600px;
-  }
-  .modal-lg {
+}
+.modal-lg {
     width: 80%;
     max-width: 900px;
-  }
-  .modal-xl {
+}
+.modal-xl {
     width: 99%;
     max-width: 1440px;
-  }
+}
 // }
 
 .icon-required-field {
-  color: @framework-grayish;
+    color: @framework-grayish;
 
-  &:before {
-    &:extend(.icon-exclamation-sign:before);
-  }
+    &:before {
+        &:extend(.icon-exclamation-sign:before);
+    }
 }
 
 .icon-required-field + .tooltip .tooltip-inner { text-transform: none; }
@@ -426,30 +364,30 @@ table.table {
     margin-bottom: 5px;
 }
 .console-heading h1, .console-heading h2, .console-heading h3, .console-heading h4, .console-heading h5 {
-    border-bottom: none;  
+    border-bottom: none;
     padding-bottom: 0;
     margin-bottom: 4px;
 }
 
 .text-uppercase{
-  text-transform: uppercase !important;
+    text-transform: uppercase !important;
 }
 
 
 // Form related classes
 .form-group {
-  position: relative;
+    position: relative;
 }
 
 .input-icon {
-  position: absolute;
-  top: 50%;
-  right: 8px;
-  margin-top: -6px;
-  font-size: 14px;
-  color: #ddd;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -7px;
+    font-size: 14px;
+    pointer-events: none;
 
-  &.icon-remove-sign {
-    cursor: pointer;
-  }
+    &.icon-remove-sign {
+        cursor: pointer;
+    }
 }

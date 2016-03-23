@@ -1,33 +1,32 @@
 &{
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: @main-font-color;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: @main-font-color;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 input[disabled] {
-  cursor: default;
+    cursor: default;
 }
 
 input[type="button"] {
-  cursor: pointer;
-  -webkit-appearance: button;
+    cursor: pointer;
+    -webkit-appearance: button;
 }
 
 body& {
-  background: @portal-background !important;
-  margin: 0;
+    margin: 0;
 }
 
 body.modal-open& { //Temporary fix before updating to new Boostrap-version
-  overflow: hidden;
+    overflow: hidden;
 }
 
 input[type=text]::-ms-clear {
-  width: 0;
-  height: 0;
+    width: 0;
+    height: 0;
 }

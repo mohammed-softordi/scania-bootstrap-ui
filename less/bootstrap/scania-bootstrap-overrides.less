@@ -2,17 +2,10 @@
 @compiled_at: `new Date()`;
 .compiled_at {content: "@{compiled_at}";}
 
-@root_path: "//static.scania.com/";
-
-//Corporate Icons CSS - Include this css as a less-reference to get the ability to extend classes to set icons
-@import (less, reference) '@{root_path}resources/fonts/corporate-icons/style.css';
-
-//Font awesome includes helper classes like icon-spin that we might need
-@import (less, reference) '@{root_path}resources/fonts/font-awesome/font-awesome.css';
-
-//BOOTSTRAP - Compiles from Bootstrap LESS-Source
-// TODO replace this with //static.scania.com/vendors/frameworks/bootstrap/3.3.4/css/bootstrap.css
-@import (less, reference) '//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css';
+//@root_path: "//static.scania.com/";
+//
+////Corporate Icons CSS - Include this css as a less-reference to get the ability to extend classes to set icons
+//@import (less, reference) '@{root_path}resources/fonts/corporate-icons/style.css';
 
 //Modules needing to be outside .bootstrap enclosure.
 @import 'variables.less'; //Scania Bootstrap Variables
@@ -24,7 +17,7 @@
   //SCANIA BOOTSTRAP
   @import 'mixins.less';
   @import 'reset.less';
-  @import 'misc.less';
+//  @import 'misc.less';
 
   @import 'common.less';
   @import 'buttons.less';
@@ -35,28 +28,32 @@
   @import 'typography.less';
 
   @import 'navigation.less';
-  @import 'panels-wells.less';
+  @import 'panels-wells.less'; //TODO changes in 1.8.0 overrides bootstrap's .panel-heading background-color. See panels-wells-1.8.0.
   @import 'alerts.less';
   @import 'forms.less';
   @import 'popovers.less';
   @import 'tooltip.less';
+  @import 'modal.less';
   @import 'grid.less';
   @import 'pageid.less'; //Page-ID reference icon with popup - SPORT Only right now.
   @import 'feedback.less'; //Scania Bootstrap Feedback messages and error handling
+  @import 'notification.less';
   @import 'logos.less'; //Scania Logos
   @import 'custom-classes.less'; //Scania Custom Classes
   @import 'portal.less'; //Portal Specific
   @import 'media-queries.less'; // Media Queries
   @import 'word-break.less';
   @import 'flex.less';
+//  @import 'scania-list-group.less'; TODO new in 1.8.0 overrides bootstrap's .list-group-item background-color
 
   @import 'global-sidebar.less'; //Global Sidebar
 }
 @import 'env-marker.less';
-@import 'bootstrap-wcm.less';
-@import 'bootstrap-app.less';
+//@import 'bootstrap-wcm.less'; //TODO maybe provide a version without wcm and app?
+//@import 'bootstrap-app.less';
+@import 'loading.less';
 
 @import 'global-header.less'; //Global Header
-
+@import 'angular.less'; // Angular related style
 @import 'chosen-phase-out.less'; //Chosen - Phase this one out
 @import 'albatross.less'; //Albatross theme
