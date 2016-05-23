@@ -7,13 +7,14 @@
 @compiled_at: `new Date()`;
 .compiled_at {content: "@{compiled_at}";}
 
+//Import Fonts
+@import (inline) url("https://static.scania.com/resources/fonts/external_fonts.css");
+
 /*!
  * BOOTSTRAP - Native Bootstrap compiled
  * This includes core bootstrap
  */
-@import 'bower_components/bootstrap/dist/css/bootstrap.css';
+@import (inline) url("https://static.scania.com/vendors/frameworks/bootstrap/3.3.5/css/bootstrap.css");
 
 //SCANIA - Bootstrap theme
-@import 'bootstrap/scania-bootstrap-overrides.less';
-
-
+@import './bootstrap/scania-bootstrap-overrides.less';
