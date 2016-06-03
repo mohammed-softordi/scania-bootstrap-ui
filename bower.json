@@ -4,9 +4,7 @@
   "description": "Scania Bootstrap CSS and JS-framework",
   "main": [
     "bootstrap/less/scania-bootstrap.less",
-    "scania-bootstrap.css",
-    "scania-dbootstrap.less",
-    "scania-dbootstrap.css"
+    "scania-bootstrap.less"
   ],
   "keywords": [
     "scania-ui",
